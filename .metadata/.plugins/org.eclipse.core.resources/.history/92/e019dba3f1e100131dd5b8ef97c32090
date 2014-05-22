@@ -1,0 +1,12 @@
+
+public class InfixoPosFixo {
+
+	public int calculaPosFixo(String posFixo) {
+		
+		//Instrução que retira espaços da String
+		String[] expressao = posFixo.split(" ");
+		
+		return 1;
+	}
+
+}
