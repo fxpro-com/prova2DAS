@@ -9,23 +9,29 @@ public class InfixoPosFixo {
 	public int calculaPosFixo(String posFixo) {
 		
 		int resultado=0;
+		
+		//Instrução que retira espaços da String
 		String[] expressao = posFixo.split(" ");
+	
+		
+		if(expressao[3].equals("+"))
+			System.out.println("tesssssssssss");
 			
 		for(int i = 0; i<5;i++){
-			if(expressao[3].equals("+")){
-				pilhaDeOperadores.add(expressao[i]);
+			if(expressao[i]=="+"){
+				//pilhaDeOperadores.add(expressao[i]);
 				System.out.println(expressao[i]);
 			}
-			else if(expressao[3].equals("-")){
-				pilhaDeOperadores.add(expressao[i]);
+			else if(expressao[i]=="-"){
+				//pilhaDeOperadores.add(expressao[i]);
 				System.out.println(expressao[i]);
 			}
-			else if(expressao[3].equals("/")){
-				pilhaDeOperadores.add(expressao[i]);
+			else if(expressao[i]=="/"){
+				//pilhaDeOperadores.add(expressao[i]);
 				System.out.println(expressao[i]);
 			}
-			else if(expressao[3].equals("*")){
-				pilhaDeOperadores.add(expressao[i]);
+			else if(expressao[i]=="*"){
+				//pilhaDeOperadores.add(expressao[i]);
 				System.out.println(expressao[i]);
 			}
 			else{
