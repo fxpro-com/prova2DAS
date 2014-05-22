@@ -12,23 +12,36 @@ public class InfixoPosFixo {
 		
 		//Instrução que retira espaços da String
 		String[] expressao = posFixo.split(" ");
+		//System.out.println(expressao[3]);
+		
+		//3 5 7 + -
 		
 		for(int i = 0; i<expressao.length;i++){
-			if(expressao[i]!="+")
-				pilhaDeNumeros.add(Integer.parseInt(expressao[i]));
-			else if(expressao[i]!="-")
-				pilhaDeNumeros.add(Integer.parseInt(expressao[i]));
-			else if(expressao[i]!="/")
-				pilhaDeNumeros.add(Integer.parseInt(expressao[i]));
-			else if(expressao[i]!="*")
-				pilhaDeNumeros.add(Integer.parseInt(expressao[i]));
-			else
+			if(expressao[i]=="+")
 				pilhaDeOperadores.add(expressao[i]);
+			else if(expressao[i]=="-")
+				pilhaDeOperadores.add(expressao[i]);
+			else if(expressao[i]=="/")
+				pilhaDeOperadores.add(expressao[i]);
+			else if(expressao[i]=="*")
+				pilhaDeOperadores.add(expressao[i]);
+			else
+				pilhaDeNumeros.add(Integer.parseInt(expressao[i]));
 		}
+		System.out.println(pilhaDeNumeros);
+		System.out.println(pilhaDeOperadores);
 		
-		for(int i=0;i<pilhaDeNumeros.size();i+=2){
-			
-			resultado = operacao(pilhaDeNumeros.get(i), pilhaDeNumeros.get(i+1), pilhaDeOperadores.get(i));
+		
+		int j = 0;
+		
+		for(int i=0;i<pilhaDeNumeros.size();i++){
+			if( i == 0){
+				resultado = operacao(pilhaDeNumeros.get(i), pilhaDeNumeros.get(i+1), pilhaDeOperadores.get(j));
+				i++;
+			}
+			else
+				resultado = operacao(resultado, pilhaDeNumeros.get(i), pilhaDeOperadores.get(i));
+			j++;
 		}
 		
 		return 1;
