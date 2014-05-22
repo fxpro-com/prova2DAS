@@ -78,7 +78,9 @@ public class InfixoPosFixo {
 		String posfixo="";
 		String operadores="";
 		int i;
-	
+		
+		//(3+5)-7
+		
 		for(i =0;i<expressao.length();i++){
 			if((expressao.charAt(i)!='(')){
 				if(expressao.charAt(i)!=')'){
@@ -97,7 +99,9 @@ public class InfixoPosFixo {
 				    	
 				
 			}
-		
+			
+				
+			//System.out.println(expressao[i]);
 		}
 		System.out.println(posfixo);
 		return posfixo+operadores;

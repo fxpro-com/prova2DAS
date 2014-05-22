@@ -78,26 +78,20 @@ public class InfixoPosFixo {
 		String posfixo="";
 		String operadores="";
 		int i;
-	
-		for(i =0;i<expressao.length();i++){
-			if((expressao.charAt(i)!='(')){
-				if(expressao.charAt(i)!=')'){
-						
-					if(expressao.charAt(i)=='+')
-						operadores+=expressao.charAt(i);
-					else if(expressao.charAt(i)=='-')
-						operadores+=expressao.charAt(i);
-					else if(expressao.charAt(i)=='*')
-						operadores+=expressao.charAt(i);
-					else if(expressao.charAt(i)=='/')
-						operadores+=expressao.charAt(i);
-					else
-						posfixo+=expressao.charAt(i);
-				}
-				    	
-				
-			}
 		
+		for(i =0;i<expressao.length();i++){
+			if((expressao.charAt(i)!='(') || expressao.charAt(i)!=')'){
+				if(expressao.charAt(i)=='+')
+					operadores+=expressao.charAt(i);
+				else if(expressao.charAt(i)=='-')
+					operadores+=expressao.charAt(i);
+				else if(expressao.charAt(i)=='*')
+					operadores+=expressao.charAt(i);
+				else if(expressao.charAt(i)=='/')
+					operadores+=expressao.charAt(i);
+				else
+					posfixo+=expressao.charAt(i);
+			}
 		}
 		System.out.println(posfixo);
 		return posfixo+operadores;

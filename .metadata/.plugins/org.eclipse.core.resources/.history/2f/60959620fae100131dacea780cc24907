@@ -97,7 +97,9 @@ public class InfixoPosFixo {
 				    	
 				
 			}
-		
+			
+				
+			//System.out.println(expressao[i]);
 		}
 		System.out.println(posfixo);
 		return posfixo+operadores;
