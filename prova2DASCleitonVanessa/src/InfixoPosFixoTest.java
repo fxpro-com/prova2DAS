@@ -1,0 +1,27 @@
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+
+public class InfixoPosFixoTest {
+	
+	InfixoPosFixo infixoPosFixo;
+
+	@Before
+	public void setUp() throws Exception {
+		infixoPosFixo = new InfixoPosFixo();
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		System.out.println("Testando");
+	}
+
+	@Test
+	public void infixoTest() {
+		assertArrayEquals(1, infixoPosFixo.calculaPosFixo("3 5 7 + -"));
+	}
+
+}
