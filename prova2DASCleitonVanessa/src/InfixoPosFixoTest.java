@@ -20,8 +20,13 @@ public class InfixoPosFixoTest {
 	}
 
 	@Test
-	public void infixoTest() {
+	public void prefixofixoTest() {
 		assertEquals(1, infixoPosFixo.calculaPosFixo("3 5 7 + -"));
+	}
+	
+	@Test
+	public void infixoTest(){
+		assertEquals("357+-", infixoPosFixo.infixo(("(3+5)-7")));
 	}
 
 }

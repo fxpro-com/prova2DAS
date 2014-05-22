@@ -7,7 +7,7 @@ public class InfixoPosFixo {
 	ArrayList<String> pilhaDeOperadores = new ArrayList<String>();
 	
 	public int calculaPosFixo(String posFixo) {
-		
+		/*
 		int resultado=0;
 		
 		//Instrução que retira espaços da String
@@ -16,17 +16,28 @@ public class InfixoPosFixo {
 		
 		//3 5 7 + -
 		
-		for(int i = 0; i<expressao.length;i++){
-			if(expressao[i]=="+")
+		for(int i = 0; i<5;i++){
+			if(expressao[i]=="+"){
 				pilhaDeOperadores.add(expressao[i]);
-			else if(expressao[i]=="-")
+			System.out.println(expressao[i]);
+			}
+			else if(expressao[i]=="-"){
 				pilhaDeOperadores.add(expressao[i]);
-			else if(expressao[i]=="/")
+				System.out.println(expressao[i]);
+			}
+			else if(expressao[i]=="/"){
 				pilhaDeOperadores.add(expressao[i]);
-			else if(expressao[i]=="*")
+				System.out.println(expressao[i]);
+			}
+			else if(expressao[i]=="*"){
 				pilhaDeOperadores.add(expressao[i]);
-			else
+				System.out.println(expressao[i]);
+			}
+			else{
 				pilhaDeNumeros.add(Integer.parseInt(expressao[i]));
+				System.out.println(expressao[i]);
+			}
+			
 		}
 		System.out.println(pilhaDeNumeros);
 		System.out.println(pilhaDeOperadores);
@@ -59,7 +70,32 @@ public class InfixoPosFixo {
 		}
 		else {
 			return numero1/numero2;
+		}*/
+		return 1;
+	}
+
+	public String infixo(String expressao) {
+		String posfixo="";
+		String operadores="";
+		int i;
+
+		
+		for(i =0;i<expressao.length();i++){
+			if((expressao.charAt(i)!='(') || expressao.charAt(i)!=')'){
+				if(expressao.charAt(i)=='+')
+					operadores+=expressao.charAt(i);
+				else if(expressao.charAt(i)=='-')
+					operadores+=expressao.charAt(i);
+				else if(expressao.charAt(i)=='*')
+					operadores+=expressao.charAt(i);
+				else if(expressao.charAt(i)=='/')
+					operadores+=expressao.charAt(i);
+				else
+					posfixo+=expressao.charAt(i);
+			}
 		}
+		System.out.println(posfixo);
+		return posfixo+operadores;
 	}
 
 }
