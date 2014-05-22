@@ -1,7 +1,7 @@
 
 public class InfixoPosFixo {
 
-	public int calculaPosFixo(String posFixo) {
+	public int calculaPosFixo(String string) {
 		return 1;
 	}
 
