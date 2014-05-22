@@ -6,43 +6,56 @@ public class InfixoPosFixo {
 	ArrayList<Integer> pilhaDeNumeros = new ArrayList<Integer>();
 	ArrayList<String> pilhaDeOperadores = new ArrayList<String>();
 	
-	public int calculaPosFixo(String posFixo) {
-		
+	public int calculaPosFixo(String posFixo) throws Exception {
 		int resultado=0;
 		String[] expressao = posFixo.split(" ");
 			
 		for(int i = 0; i<5;i++){
 			if(expressao[3].equals("+")){
 				pilhaDeOperadores.add(expressao[i]);
-				System.out.println(expressao[i]);
 			}
 			else if(expressao[3].equals("-")){
 				pilhaDeOperadores.add(expressao[i]);
-				System.out.println(expressao[i]);
 			}
 			else if(expressao[3].equals("/")){
 				pilhaDeOperadores.add(expressao[i]);
-				System.out.println(expressao[i]);
 			}
 			else if(expressao[3].equals("*")){
 				pilhaDeOperadores.add(expressao[i]);
-				System.out.println(expressao[i]);
 			}
 			else{
-				pilhaDeNumeros.add(Integer.parseInt(expressao[i]));
-				System.out.println(expressao[i]);
+				if(expressao[i].equals(1))					
+					pilhaDeNumeros.add(Integer.parseInt(expressao[i]));
+				else if(expressao[i].equals(2))					
+					pilhaDeNumeros.add(Integer.parseInt(expressao[i]));
+				else if(expressao[i].equals(3))					
+					pilhaDeNumeros.add(Integer.parseInt(expressao[i]));
+				else if(expressao[i].equals(4))					
+					pilhaDeNumeros.add(Integer.parseInt(expressao[i]));
+				else if(expressao[i].equals(5))					
+					pilhaDeNumeros.add(Integer.parseInt(expressao[i]));
+				else if(expressao[i].equals(6))					
+					pilhaDeNumeros.add(Integer.parseInt(expressao[i]));
+				else if(expressao[i].equals(7))					
+					pilhaDeNumeros.add(Integer.parseInt(expressao[i]));
+				else if(expressao[i].equals(8))					
+					pilhaDeNumeros.add(Integer.parseInt(expressao[i]));
+				else if(expressao[i].equals(9))					
+					pilhaDeNumeros.add(Integer.parseInt(expressao[i]));
+				else
+					throw new Exception("Erro na expressao");
 			}
 			
 		}
-		//System.out.println(pilhaDeNumeros);
-		//System.out.println(pilhaDeOperadores);
-		
 		
 		int j = 0;
 		
 		for(int i=0;i<pilhaDeNumeros.size();i++){
-			if( i == 0){
+			
+			if(i == 0){
+				System.out.println(pilhaDeNumeros.get(i)+pilhaDeNumeros.get(i+1)+pilhaDeOperadores.get(j));
 				resultado = operacao(pilhaDeNumeros.get(i), pilhaDeNumeros.get(i+1), pilhaDeOperadores.get(j));
+				System.out.println(resultado);
 				i++;
 			}
 			else
@@ -50,7 +63,7 @@ public class InfixoPosFixo {
 			j++;
 		}
 		
-		return 1;
+		return resultado+1;
 	}
 	
 	private int operacao(int numero1, int numero2,String operador) {
