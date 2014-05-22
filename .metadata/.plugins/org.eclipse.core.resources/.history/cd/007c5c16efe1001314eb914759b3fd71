@@ -21,7 +21,7 @@ public class InfixoPosFixoTest {
 
 	@Test
 	public void infixoTest() {
-		assertEquals(1, infixoPosFixo.calculaPosFixo("3 5 7 + -"));
+		assertArrayEquals(1, infixoPosFixo.calculaPosFixo("3 5 7 + -"));
 	}
 
 }

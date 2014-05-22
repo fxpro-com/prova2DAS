@@ -1,0 +1,9 @@
+
+public class InfixoPosFixo {
+
+	public String calculaPosFixo(String string) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
