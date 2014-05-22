@@ -32,15 +32,15 @@ public class InfixoPosFixo {
 				else if(expressao[i].equals("3")){
 					pilhaDeNumeros.add(Integer.parseInt(expressao[i]));
 				}
-				else if(expressao[i].equals("4")){
+				else if(expressao[i].equals("4")){					
 					pilhaDeNumeros.add(Integer.parseInt(expressao[i]));
 				}
-				else if(expressao[i].equals("5")){
+				else if(expressao[i].equals("5")){					
 					pilhaDeNumeros.add(Integer.parseInt(expressao[i]));
 				}
 				else if(expressao[i].equals("6"))					
 					pilhaDeNumeros.add(Integer.parseInt(expressao[i]));
-				else if(expressao[i].equals("7")){	
+				else if(expressao[i].equals("7")){					
 					pilhaDeNumeros.add(Integer.parseInt(expressao[i]));
 				}
 				else if(expressao[i].equals("8"))					
@@ -53,16 +53,21 @@ public class InfixoPosFixo {
 			
 		}
 		
+		System.out.println(pilhaDeNumeros.size());
+		System.out.println(pilhaDeOperadores.size());
+		
 		int j = 0;
 		
 		for(int i=0;i<pilhaDeNumeros.size();i++){
 			
 			if(i == 0){
+				System.out.println(pilhaDeNumeros.get(i)+pilhaDeNumeros.get(i+1)+pilhaDeOperadores.get(j));
 				resultado = operacao(pilhaDeNumeros.get(i), pilhaDeNumeros.get(i+1), pilhaDeOperadores.get(j));
+				System.out.println(resultado);
 				i++;
 			}
 			else
-				resultado = operacao(resultado, pilhaDeNumeros.get(i), pilhaDeOperadores.get(j));
+				resultado = operacao(resultado, pilhaDeNumeros.get(i), pilhaDeOperadores.get(i));
 			j++;
 		}
 		
@@ -70,13 +75,13 @@ public class InfixoPosFixo {
 	}
 	
 	private int operacao(int numero1, int numero2,String operador) {
-		if(operador.equals("+")){
+		if(operador=="+"){
 			return numero1+numero2;
 		}
-		else if(operador.equals("-")){
+		else if(operador=="-"){
 			return numero1-numero2;
 		}
-		else if(operador.equals("*")){
+		else if(operador=="*"){
 			return numero1*numero2;
 		}
 		else {

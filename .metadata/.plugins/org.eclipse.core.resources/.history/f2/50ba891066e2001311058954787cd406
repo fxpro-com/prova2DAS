@@ -16,7 +16,7 @@ public class InfixoPosFixoTest {
 
 	@After
 	public void tearDown() throws Exception {
-		//System.out.println("Testando");
+		System.out.println("Testando");
 	}
 
 	@Test
@@ -33,7 +33,5 @@ public class InfixoPosFixoTest {
 	public void testLancaException() throws Exception{
 		infixoPosFixo.calculaPosFixo("a a f");
 	}
-	
-	
 	
 }

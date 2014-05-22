@@ -34,6 +34,4 @@ public class InfixoPosFixoTest {
 		infixoPosFixo.calculaPosFixo("a a f");
 	}
 	
-	
-	
 }

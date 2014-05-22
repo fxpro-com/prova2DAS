@@ -59,10 +59,11 @@ public class InfixoPosFixo {
 			
 			if(i == 0){
 				resultado = operacao(pilhaDeNumeros.get(i), pilhaDeNumeros.get(i+1), pilhaDeOperadores.get(j));
+				System.out.println(resultado);
 				i++;
 			}
 			else
-				resultado = operacao(resultado, pilhaDeNumeros.get(i), pilhaDeOperadores.get(j));
+				resultado = operacao(resultado, pilhaDeNumeros.get(i), pilhaDeOperadores.get(i));
 			j++;
 		}
 		
@@ -70,13 +71,13 @@ public class InfixoPosFixo {
 	}
 	
 	private int operacao(int numero1, int numero2,String operador) {
-		if(operador.equals("+")){
+		if(operador=="+"){
 			return numero1+numero2;
 		}
-		else if(operador.equals("-")){
+		else if(operador=="-"){
 			return numero1-numero2;
 		}
-		else if(operador.equals("*")){
+		else if(operador=="*"){
 			return numero1*numero2;
 		}
 		else {

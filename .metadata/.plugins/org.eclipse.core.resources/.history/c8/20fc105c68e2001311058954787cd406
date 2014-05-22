@@ -59,6 +59,7 @@ public class InfixoPosFixo {
 			
 			if(i == 0){
 				resultado = operacao(pilhaDeNumeros.get(i), pilhaDeNumeros.get(i+1), pilhaDeOperadores.get(j));
+				System.out.println(resultado);
 				i++;
 			}
 			else

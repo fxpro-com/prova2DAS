@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testrun name="InfixoPosFixoTest" project="prova2DASCleitonVanessa" tests="2" started="2" failures="0" errors="0" ignored="0">
-  <testsuite name="InfixoPosFixoTest" time="0.0">
-    <testcase name="prefixofixoTest" classname="InfixoPosFixoTest" time="0.0"/>
-    <testcase name="infixoTest" classname="InfixoPosFixoTest" time="0.0"/>
-  </testsuite>
-</testrun>
